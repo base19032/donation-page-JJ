@@ -1,93 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Support Our Campaign</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f2f2f2;
-      margin: 0;
-      padding: 0;
+      padding: 30px;
+      background: #f5f5f5;
+      color: #222;
     }
     .container {
-      background: white;
       max-width: 600px;
-      margin: 40px auto;
-      padding: 30px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      border-radius: 12px;
+      margin: auto;
+      background: white;
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
     }
-    h1 { text-align: center; color: #2c3e50; }
-    .donate-options button {
-      margin: 5px;
-      background: #d32f2f;
+    h1 {
+      text-align: center;
+    }
+    .donate-buttons a {
+      display: inline-block;
+      margin: 8px;
+      padding: 12px 24px;
+      border-radius: 5px;
+      background: #cc0000;
       color: white;
-      padding: 10px 15px;
-      border: none;
-      border-radius: 6px;
-      font-size: 1em;
-      cursor: pointer;
+      text-decoration: none;
+      font-weight: bold;
     }
-    .form-group {
-      margin-bottom: 20px;
+    form {
+      margin-top: 40px;
+      border-top: 1px solid #ccc;
+      padding-top: 20px;
     }
-    label { display: block; margin-bottom: 8px; }
-    input[type="email"], input[type="text"] {
+    label {
+      font-weight: bold;
+    }
+    input[type="email"] {
       width: 100%;
       padding: 10px;
-      font-size: 1em;
+      margin-top: 5px;
+      margin-bottom: 15px;
     }
-    .footer-note {
-      font-size: 0.85em;
-      color: #666;
-      margin-top: 20px;
+    button {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Make Your Voice Heard</h1>
-    <p>Poll closes at midnight! Your input is critical — and every dollar counts.</p>
+    <h1>Support John James for Senate</h1>
+    <p>Make your voice heard. Donate now to help us reach our end-of-month goal.</p>
 
-    <!-- Donation buttons linking to WinRed -->
-    <div class="form-group donate-options">
-      <label>Select an amount:</label>
-      <a href="https://secure.winred.com/john-james-for-mi/may-eom-polling-ber?amount=25&utm_source=prospecting&utm_term=BER_email&utm_medium=email&utm_campaign=JAMES_MAY_EOM_1_BER&recurring=true">
-        <button>$25</button>
-      </a>
-      <a href="https://secure.winred.com/john-james-for-mi/may-eom-polling-ber?amount=50&utm_source=prospecting&utm_term=BER_email&utm_medium=email&utm_campaign=JAMES_MAY_EOM_1_BER&recurring=true">
-        <button>$50</button>
-      </a>
-      <a href="https://secure.winred.com/john-james-for-mi/may-eom-polling-ber?amount=100&utm_source=prospecting&utm_term=BER_email&utm_medium=email&utm_campaign=JAMES_MAY_EOM_1_BER&recurring=true">
-        <button>$100</button>
-      </a>
-      <a href="https://secure.winred.com/john-james-for-mi/may-eom-polling-ber?amount=250&utm_source=prospecting&utm_term=BER_email&utm_medium=email&utm_campaign=JAMES_MAY_EOM_1_BER&recurring=true">
-        <button>$250</button>
-      </a>
+    <div class="donate-buttons">
+      <a href="https://secure.winred.com/john-james-for-mi/may-eom-polling-ber?amount=5&utm_source=prospecting&utm_term=BER_email&utm_medium=email&utm_campaign=JAMES_MAY_EOM_1_BER&recurring=true">$5</a>
+      <a href="https://secure.winred.com/john-james-for-mi/may-eom-polling-ber?amount=15&utm_source=prospecting&utm_term=BER_email&utm_medium=email&utm_campaign=JAMES_MAY_EOM_1_BER&recurring=true">$15</a>
+      <a href="https://secure.winred.com/john-james-for-mi/may-eom-polling-ber?amount=25&utm_source=prospecting&utm_term=BER_email&utm_medium=email&utm_campaign=JAMES_MAY_EOM_1_BER&recurring=true">$25</a>
+      <a href="https://secure.winred.com/john-james-for-mi/may-eom-polling-ber?amount=50&utm_source=prospecting&utm_term=BER_email&utm_medium=email&utm_campaign=JAMES_MAY_EOM_1_BER&recurring=true">$50</a>
     </div>
 
-    <!-- Optional unsubscribe checkbox -->
-    <form action="https://your-unsubscribe-logger-url.com" method="GET">
-      <div class="form-group">
-        <label for="email">Your Email:</label>
-        <input type="email" name="email" required>
-      </div>
+    <!-- Unsubscribe form -->
+    <form action="https://script.google.com/macros/s/AKfycbys5cpo7SX5T5Ru0emmr9FN6iBv2RmL2ZRHDJM0LRNr3x2EqUS8MdXAztThWx_B7N0x/exec" method="GET">
+      <h2>Unsubscribe</h2>
+      <label for="email">Your Email:</label>
+      <input type="email" name="email" required>
 
-      <div class="form-group">
-        <label>
-          <input type="checkbox" name="unsubscribe" value="true">
-          I no longer want to receive campaign emails
-        </label>
-      </div>
+      <label>
+        <input type="checkbox" name="unsubscribe" value="true" required>
+        I no longer want to receive campaign emails
+      </label><br><br>
 
-      <button type="submit">Unsubscribe</button>
+      <button type="submit">Submit</button>
     </form>
-
-    <p class="footer-note">
-      Contributions or gifts are not tax deductible.
-    </p>
   </div>
 </body>
 </html>
