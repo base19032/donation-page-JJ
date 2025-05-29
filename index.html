@@ -7,94 +7,99 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f5f5f5;
       margin: 0;
-      padding: 40px 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
+      padding: 0;
+      background: url('488871628_2148561392272079_7745220468003235708_n.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
     }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55); /* dark overlay for contrast */
+      z-index: -1;
+    }
+
     .container {
       max-width: 600px;
-      background: white;
-      padding: 30px 40px;
+      margin: 60px auto;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px;
       border-radius: 12px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      color: #222;
     }
+
     h1 {
       text-align: center;
-      color: #222;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
     }
+
     p {
       text-align: center;
-      color: #555;
-      margin-bottom: 30px;
+      font-size: 1.1rem;
     }
+
     .donate-buttons {
       text-align: center;
-      margin-bottom: 30px;
+      margin: 20px 0;
     }
+
     .donate-buttons a {
       display: inline-block;
-      margin: 10px;
-      padding: 14px 28px;
-      border-radius: 6px;
+      margin: 8px;
+      padding: 12px 24px;
+      border-radius: 5px;
       background: #cc0000;
       color: white;
       text-decoration: none;
       font-weight: bold;
-      transition: background 0.3s ease;
+      transition: background 0.2s ease;
     }
+
     .donate-buttons a:hover {
-      background: #a00000;
+      background: #a50000;
     }
+
     form {
-      border-top: 1px solid #ddd;
-      padding-top: 25px;
+      margin-top: 30px;
+      border-top: 1px solid #ccc;
+      padding-top: 20px;
     }
-    h2 {
-      text-align: center;
-      margin-bottom: 20px;
-      font-size: 20px;
-      color: #333;
-    }
+
     label {
       font-weight: bold;
       display: block;
-      margin-bottom: 5px;
+      margin-top: 15px;
     }
+
     input[type="email"] {
       width: 100%;
-      padding: 12px;
-      margin-bottom: 20px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 16px;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #aaa;
     }
-    .checkbox-group {
-      display: flex;
-      align-items: center;
-      margin-bottom: 20px;
+
+    input[type="checkbox"] {
+      margin-top: 15px;
     }
-    .checkbox-group input {
-      margin-right: 10px;
-    }
+
     button {
-      display: block;
-      width: 100%;
       background: #007bff;
       color: white;
       border: none;
-      padding: 12px;
+      padding: 12px 24px;
       font-size: 16px;
-      border-radius: 6px;
+      border-radius: 4px;
       cursor: pointer;
-      transition: background 0.3s ease;
+      margin-top: 20px;
     }
+
     button:hover {
-      background: #005ecb;
+      background: #0056b3;
     }
   </style>
 </head>
@@ -107,15 +112,16 @@
       <a href="https://secure.winred.com/john-james-for-mi/may-eom-polling-ber?amount=5&utm_source=prospecting&utm_term=BER_email&utm_medium=email&utm_campaign=JAMES_MAY_EOM_1_BER&recurring=true">Donate Now</a>
     </div>
 
+    <!-- Unsubscribe form -->
     <form action="https://script.google.com/macros/s/AKfycbys5cpo7SX5T5Ru0emmr9FN6iBv2RmL2ZRHDJM0LRNr3x2EqUS8MdXAztThWx_B7N0x/exec" method="GET">
       <h2>Unsubscribe</h2>
       <label for="email">Your Email:</label>
       <input type="email" name="email" required>
 
-      <div class="checkbox-group">
+      <label>
         <input type="checkbox" name="unsubscribe" value="true" required>
-        <label>I no longer want to receive campaign emails</label>
-      </div>
+        I no longer want to receive campaign emails
+      </label><br>
 
       <button type="submit">Submit</button>
     </form>
