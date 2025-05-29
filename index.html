@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Support Our Campaign</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      background: white;
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-radius: 12px;
+    }
+    h1 { text-align: center; color: #2c3e50; }
+    .donate-options button {
+      margin: 5px;
+      background: #d32f2f;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    label { display: block; margin-bottom: 8px; }
+    input[type="email"], input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 1em;
+    }
+    .footer-note {
+      font-size: 0.85em;
+      color: #666;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Make Your Voice Heard</h1>
+    <p>Poll closes at midnight! Your input is critical — and every dollar counts.</p>
+
+    <!-- Donation buttons linking to WinRed -->
+    <div class="form-group donate-options">
+      <label>Select an amount:</label>
+      <a href="https://secure.winred.com/john-james-for-mi/may-eom-polling-ber?amount=25&utm_source=prospecting&utm_term=BER_email&utm_medium=email&utm_campaign=JAMES_MAY_EOM_1_BER&recurring=true">
+        <button>$25</button>
+      </a>
+      <a href="https://secure.winred.com/john-james-for-mi/may-eom-polling-ber?amount=50&utm_source=prospecting&utm_term=BER_email&utm_medium=email&utm_campaign=JAMES_MAY_EOM_1_BER&recurring=true">
+        <button>$50</button>
+      </a>
+      <a href="https://secure.winred.com/john-james-for-mi/may-eom-polling-ber?amount=100&utm_source=prospecting&utm_term=BER_email&utm_medium=email&utm_campaign=JAMES_MAY_EOM_1_BER&recurring=true">
+        <button>$100</button>
+      </a>
+      <a href="https://secure.winred.com/john-james-for-mi/may-eom-polling-ber?amount=250&utm_source=prospecting&utm_term=BER_email&utm_medium=email&utm_campaign=JAMES_MAY_EOM_1_BER&recurring=true">
+        <button>$250</button>
+      </a>
+    </div>
+
+    <!-- Optional unsubscribe checkbox -->
+    <form action="https://your-unsubscribe-logger-url.com" method="GET">
+      <div class="form-group">
+        <label for="email">Your Email:</label>
+        <input type="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label>
+          <input type="checkbox" name="unsubscribe" value="true">
+          I no longer want to receive campaign emails
+        </label>
+      </div>
+
+      <button type="submit">Unsubscribe</button>
+    </form>
+
+    <p class="footer-note">
+      Contributions or gifts are not tax deductible.
+    </p>
+  </div>
+</body>
+</html>
