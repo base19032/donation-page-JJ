@@ -7,53 +7,94 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      padding: 30px;
       background: #f5f5f5;
-      color: #222;
+      margin: 0;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
     }
     .container {
       max-width: 600px;
-      margin: auto;
       background: white;
-      padding: 20px 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
     }
     h1 {
       text-align: center;
+      color: #222;
+      margin-bottom: 10px;
+    }
+    p {
+      text-align: center;
+      color: #555;
+      margin-bottom: 30px;
+    }
+    .donate-buttons {
+      text-align: center;
+      margin-bottom: 30px;
     }
     .donate-buttons a {
       display: inline-block;
-      margin: 8px;
-      padding: 12px 24px;
-      border-radius: 5px;
+      margin: 10px;
+      padding: 14px 28px;
+      border-radius: 6px;
       background: #cc0000;
       color: white;
       text-decoration: none;
       font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    .donate-buttons a:hover {
+      background: #a00000;
     }
     form {
-      margin-top: 40px;
-      border-top: 1px solid #ccc;
-      padding-top: 20px;
+      border-top: 1px solid #ddd;
+      padding-top: 25px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 20px;
+      color: #333;
     }
     label {
       font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
     }
     input[type="email"] {
       width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      margin-bottom: 15px;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+    .checkbox-group {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .checkbox-group input {
+      margin-right: 10px;
     }
     button {
+      display: block;
+      width: 100%;
       background: #007bff;
       color: white;
       border: none;
-      padding: 10px 20px;
+      padding: 12px;
       font-size: 16px;
-      border-radius: 4px;
+      border-radius: 6px;
       cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #005ecb;
     }
   </style>
 </head>
@@ -64,18 +105,17 @@
 
     <div class="donate-buttons">
       <a href="https://secure.winred.com/john-james-for-mi/may-eom-polling-ber?amount=5&utm_source=prospecting&utm_term=BER_email&utm_medium=email&utm_campaign=JAMES_MAY_EOM_1_BER&recurring=true">Donate Now</a>
-     
+    </div>
 
-    <!-- Unsubscribe form -->
     <form action="https://script.google.com/macros/s/AKfycbys5cpo7SX5T5Ru0emmr9FN6iBv2RmL2ZRHDJM0LRNr3x2EqUS8MdXAztThWx_B7N0x/exec" method="GET">
       <h2>Unsubscribe</h2>
       <label for="email">Your Email:</label>
       <input type="email" name="email" required>
 
-      <label>
+      <div class="checkbox-group">
         <input type="checkbox" name="unsubscribe" value="true" required>
-        I no longer want to receive campaign emails
-      </label><br><br>
+        <label>I no longer want to receive campaign emails</label>
+      </div>
 
       <button type="submit">Submit</button>
     </form>
