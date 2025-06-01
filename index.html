@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Support Our Campaign</title>
   <style>
     body {
@@ -11,120 +11,160 @@
       padding: 0;
       background: url('488871628_2148561392272079_7745220468003235708_n.jpg') no-repeat center center fixed;
       background-size: cover;
-      color: #fff;
+      color: #222;
     }
 
     body::before {
       content: "";
       position: fixed;
       inset: 0;
-      background: rgba(0, 0, 0, 0.55); /* dark overlay for contrast */
+      background: rgba(255, 255, 255, 0.9);
       z-index: -1;
     }
 
     .container {
       max-width: 600px;
       margin: 60px auto;
-      background: rgba(255, 255, 255, 0.9);
+      background: white;
       padding: 30px;
       border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-      color: #222;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     }
 
     h1 {
+      font-size: 2rem;
+      font-weight: bold;
+      color: navy;
       text-align: center;
-      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      margin-top: 40px;
+      color: #444;
     }
 
     p {
       text-align: center;
-      font-size: 1.1rem;
+      font-size: 1rem;
+      margin: 15px 0;
     }
 
-    .donate-buttons {
-      text-align: center;
-      margin: 20px 0;
-    }
-
-    .donate-buttons a {
-      display: inline-block;
-      margin: 8px;
-      padding: 12px 24px;
-      border-radius: 5px;
-      background: #cc0000;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.2s ease;
-    }
-
-    .donate-buttons a:hover {
-      background: #a50000;
-    }
-
-    form {
-      margin-top: 30px;
-      border-top: 1px solid #ccc;
-      padding-top: 20px;
-    }
-
-    label {
-      font-weight: bold;
+    .donate-button {
       display: block;
-      margin-top: 15px;
-    }
-
-    input[type="email"] {
       width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      border-radius: 5px;
-      border: 1px solid #aaa;
-    }
-
-    input[type="checkbox"] {
-      margin-top: 15px;
-    }
-
-    button {
-      background: #007bff;
+      text-align: center;
+      background: orange;
       color: white;
+      font-weight: bold;
+      padding: 14px;
+      font-size: 1.1rem;
       border: none;
-      padding: 12px 24px;
-      font-size: 16px;
-      border-radius: 4px;
-      cursor: pointer;
+      border-radius: 5px;
       margin-top: 20px;
+      cursor: pointer;
+      text-decoration: none;
     }
 
-    button:hover {
-      background: #0056b3;
+    .secure-text {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #007bff;
+      margin-top: 5px;
+    }
+
+    .pledge-section label,
+    .pledge-section select,
+    .pledge-section input {
+      display: block;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .pledge-section input,
+    .pledge-section select {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .unsubscribe-text {
+      font-size: 0.85rem;
+      text-align: center;
+      color: #888;
+      margin-top: 30px;
+    }
+
+    .unsubscribe-text a {
+      color: gray;
+      text-decoration: underline;
+    }
+
+    details {
+      margin-top: 30px;
+    }
+
+    summary {
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Support John James for MI</h1>
-    <p>Make your voice heard. Donate now to help us reach our end-of-month goal.</p>
+    <h1>Donate Once, Hassle-Free!</h1>
+    <p><strong>Your one-time gift powers our campaign—without the spam.</strong></p>
+    <p>
+      We respect your support and promise to only charge you once this season. You might get a few friendly reminders, but once you donate, we won’t ask again. Unlike others, we keep your info private and never share it.
+    </p>
+    <a class="donate-button" href="https://secure.winred.com/john-james-for-mi/may-eom-polling-ber">Give Once Now</a>
+    <p class="secure-text">
+      🔒 100% Secure Payment
+    </p>
 
-    <div class="donate-buttons">
-      <a href="https://secure.winred.com/john-james-for-mi/may-eom-polling-ber?amount=5&utm_source=prospecting&utm_term=BER_email&utm_medium=email&utm_campaign=JAMES_MAY_EOM_1_BER&recurring=true">Donate Now</a>
+    <div class="pledge-section">
+      <h2>Not ready yet?</h2>
+      <p>Pick a date and amount for a one-time reminder.</p>
+      <form>
+        <label for="pledge-date">Reminder Date:</label>
+        <select id="pledge-date">
+          <option value="2025-06-01">June 1, 2025</option>
+          <option value="2025-06-15">June 15, 2025</option>
+          <option value="2025-07-01">July 1, 2025</option>
+        </select>
+
+        <label for="pledge-amount">Pledge Amount ($):</label>
+        <input type="number" id="pledge-amount" placeholder="Enter amount">
+      </form>
     </div>
 
-    <!-- Unsubscribe form -->
-    <form action="https://script.google.com/macros/s/AKfycbys5cpo7SX5T5Ru0emmr9FN6iBv2RmL2ZRHDJM0LRNr3x2EqUS8MdXAztThWx_B7N0x/exec" method="GET">
-      <h2>Unsubscribe</h2>
-      <label for="email">Your Email:</label>
-      <input type="email" name="email" required>
+    <div class="unsubscribe-text">
+      Thinking of unsubscribing? We get it—your inbox is busy. But staying with us means you’ll hear key updates about our fight for change. We’ll only send a few messages to inspire your one-time gift. <br>
+      <a href="#">Unsubscribe</a>
+    </div>
 
-      <label>
-        <input type="checkbox" name="unsubscribe" value="true" required>
-        I no longer want to receive campaign emails
-      </label><br>
+    <details>
+      <summary>FAQ</summary>
+      <ul>
+        <li><strong>Why only one donation?</strong> We value your support and respect your inbox. You’ll only be charged once this season—no repeat asks.</li>
+        <li><strong>Will I get multiple messages?</strong> We may send a few gentle reminders to encourage your one-time gift, but once you donate, we won’t ask again this season.</li>
+        <li><strong>What’s the pledge reminder?</strong> Choose a date and amount for a single, friendly reminder about your one-time donation—no pressure, just a nudge.</li>
+        <li><strong>Is my information shared?</strong> Never. Your data stays secure with us and is never sold or shared with other vendors.</li>
+        <li><strong>Is my donation secure?</strong> Yes, we use top-tier encryption to protect your payment. Look for the lock icon at checkout.</li>
+        <li><strong>What if others contact me?</strong> We can’t control other vendors, but we pledge to keep your info private and only charge once.</li>
+      </ul>
+    </details>
 
-      <button type="submit">Submit</button>
-    </form>
+    <footer>
+      One Gift, Zero Hassle – Your trusted way to support us.
+    </footer>
   </div>
 </body>
 </html>
